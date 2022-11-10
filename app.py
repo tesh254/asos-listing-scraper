@@ -12,7 +12,9 @@ def main():
         if (sys.argv[1] == '--asos' and sys.argv[2]):
             scraper = Scraper(sys.argv[2])
 
+            print("::::Scraping started::::")
             scraper.run()
+            print("::::Scraping finished::::")
 
             store.save_to_db(scraper.product_details)
         if (sys.argv[1] == '--read'):
